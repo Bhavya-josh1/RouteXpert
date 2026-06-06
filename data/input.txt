@@ -1,0 +1,6 @@
+DIJKSTRA 5
+Warehouse 0 0
+ShopA 2 4
+ShopB 5 2
+ShopC 6 7
+ShopD 1 8
