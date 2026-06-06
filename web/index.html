@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RouteXpert - Smart Delivery Route Optimizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── LEFT SIDEBAR ── -->
+<div class="sidebar">
+    <h1>🗺️ RouteXpert</h1>
+    <p class="subtitle">Smart Delivery Route Optimizer</p>
+
+    <!-- Algorithm Selection -->
+    <div>
+        <label>Select Algorithm</label>
+        <select id="algoSelect">
+            <option value="GREEDY">Greedy Nearest Neighbor</option>
+            <option value="HELDKARP">Held-Karp DP (Optimal)</option>
+            <option value="DIJKSTRA">Dijkstra Shortest Path</option>
+            <option value="BFS">BFS Traversal</option>
+            <option value="DFS">DFS Traversal</option>
+        </select>
+    </div>
+
+    <!-- Instructions -->
+    <div>
+        <label>How to Use</label>
+        <div class="result-box" style="min-height:80px; font-size:11px;">
+            1. Click on the canvas to place the <span class="highlight">Warehouse</span> (first click)<br>
+            2. Click to add <span class="highlight">Delivery Locations</span><br>
+            3. Select an algorithm<br>
+            4. Click <span class="highlight">Find Route</span>
+        </div>
+    </div>
+
+    <!-- Locations Added -->
+    <div>
+        <label>Locations Added</label>
+        <div class="node-list" id="nodeList">
+            <div style="color:#555;">No locations yet...</div>
+        </div>
+    </div>
+
+    <!-- Buttons -->
+    <button id="runBtn">▶ Find Route</button>
+    <button id="clearBtn">✕ Clear All</button>
+
+    <!-- Results -->
+    <div>
+        <label>Result</label>
+        <div class="result-box" id="resultBox">
+            Run an algorithm to see results here.
+        </div>
+    </div>
+</div>
+
+<!-- ── CANVAS AREA ── -->
+<div class="canvas-area">
+    <p>Click on the map to place delivery locations</p>
+    <canvas id="mapCanvas" width="800" height="600"></canvas>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
